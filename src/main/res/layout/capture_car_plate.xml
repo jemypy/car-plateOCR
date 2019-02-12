@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/ImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="280dp">
+
+            <ImageView
+                android:id="@+id/displayImage"
+                android:layout_width="322dp"
+                android:layout_height="223dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerInside" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/btnCaptureImage"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Capture Image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/displayImage" />
+
+            <Button
+                android:id="@+id/btn_OCR"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:text="Run OCR"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/OCRTextContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#e4e3e3">
+
+            <TextView
+                android:id="@+id/tv_OCR_Result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#dedede"
+                android:text="OCR Text will appear here"
+                android:textColor="#a3a3a3"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
